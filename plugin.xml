@@ -16,13 +16,19 @@
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
   </engines>
-    <asset src="www/DGGeofencing.js" target="DGGeofencing.js" />
-
+ 
+    <js-module src="www/DGGeofencing.js" name="DGGeofencing">
+        <clobbers target="DGGeofencing" />
+    </js-module>
     
     <!-- ios -->
     <platform name="ios">
-        <plugins-plist key="DGGeofencing"
-                    string="DGGeofencing" />
+                    
+        <config-file target="config.xml" parent="/*">
+            <feature name="DGGeofencing">
+                <param name="ios-package" value="DGGeofencing"/>
+            </feature>
+        </config-file>                    
 
         <header-file src="src/ios/DGGeofencing/DGGeofencing.h" />
         <source-file src="src/ios/DGGeofencing/DGGeofencing.m" />
