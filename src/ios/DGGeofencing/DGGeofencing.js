@@ -70,3 +70,5 @@ var DGGeofencing = {
 		return Cordova.exec(success, fail, "DGGeofencing", "stopMonitoringSignificantLocationChanges", []);
 	}
 };
+
+module.exports = DGGeofencing;
