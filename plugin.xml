@@ -19,6 +19,7 @@
  
     <js-module src="www/DGGeofencing.js" name="DGGeofencing">
         <clobbers target="geofencing" />
+        <clobbers target="DGGeofencing" />
     </js-module>
     
     <!-- ios -->
